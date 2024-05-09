@@ -1,16 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="Description" content="Quickstart OpenShift" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="theme-color" content="#003366" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link rel="icon" href="/favicon.ico" />
-    <title>QuickStart OpenShift</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="Description" content="Quickstart OpenShift" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="#003366" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <!-- <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" /> -->
+
+
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans: 400, 700" rel="stylesheet">
+
+  <!-- bcgov bootstrap -->
+  <script defer="defer" src="./bootstrap-theme.min.js"></script>
+  <link href="./bootstrap-theme.min.css" rel="stylesheet">
+
+  <!-- leaflet stuff -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- esri leaflet -->
+  <script src="https://unpkg.com/esri-leaflet@3.0.12/dist/esri-leaflet.js"></script>
+  <script src="https://unpkg.com/esri-leaflet-vector@4.2.3/dist/esri-leaflet-vector.js"></script>
+
+
+
+   <!-- map code -->
+   <script type = "text/javascript" src="leaflet_map.js"></script>
+
+
+
+  <link rel="icon" href="/favicon.ico" />
+  <title>QuickStart OpenShift Leaflet</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-nav">
+      <!-- Navbar content -->
+      <div class="container">
+        <a class="navbar-brand" href="https://www2.gov.bc.ca">
+          <img class="img-fluid d-none d-md-block" src="dist/images/bcid-logo-rev-en.svg" width="177" height="44"
+            alt="B.C. Government Logo">
+          <img class="img-fluid d-md-none" src="dist/images/bcid-symbol-rev.svg" width="63" height="44"
+            alt="B.C. Government Logo">
+        </a>
+        <div class="navbar-brand">
+          Quickstart Openshift Leaflet Demo
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="introduction.html">Getting Started</a>
+            <a class="nav-link" href="demo.html">Theme Demo</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+  <!-- <div id="root"></div> -->
+  <!-- <script type="module" src="/src/main.tsx"></script> -->
+  <div class="container">
+    <div class="map_align">
+      <br><br>
+      <div id="map" style="width: 800px; height: 600px;"></div>
+    </div>
+  </div>
+  <script>
+
+    // proper_os_map();
+    esri_crap();
+
+  </script>
+
+</body>
+
 </html>
