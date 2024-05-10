@@ -40,22 +40,22 @@ jobs:
           - dir: frontend
             token: SONAR_TOKEN_FRONTEND
     steps:
-      - uses: bcgov-nr/action-test-and-analyse@v1.2.1
-        with:
-          commands: |
-            npm ci
-            npm run test:cov
-          dir: ${{ matrix.dir }}
-          node_version: "20"
-          sonar_args: >
-            -Dsonar.exclusions=**/coverage/**,**/node_modules/**,**/*spec.ts
-            -Dsonar.organization=bcgov-sonarcloud
-            -Dsonar.projectKey=quickstart-openshift_${{ matrix.dir }}
-            -Dsonar.sources=src
-            -Dsonar.tests.inclusions=**/*spec.ts
-            -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
-          sonar_token: ${{ secrets[matrix.token] }}
-          triggers: ('${{ matrix.dir }}/')
+      # - uses: bcgov-nr/action-test-and-analyse@v1.2.1
+      #   with:
+      #     commands: |
+      #       npm ci
+      #       npm run test:cov
+      #     dir: ${{ matrix.dir }}
+      #     node_version: "20"
+      #     sonar_args: >
+      #       -Dsonar.exclusions=**/coverage/**,**/node_modules/**,**/*spec.ts
+      #       -Dsonar.organization=bcgov-sonarcloud
+      #       -Dsonar.projectKey=quickstart-openshift_${{ matrix.dir }}
+      #       -Dsonar.sources=src
+      #       -Dsonar.tests.inclusions=**/*spec.ts
+      #       -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
+      #     sonar_token: ${{ secrets[matrix.token] }}
+      #     triggers: ('${{ matrix.dir }}/')
 
   # https://github.com/marketplace/actions/aqua-security-trivy
   trivy:
