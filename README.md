@@ -6,7 +6,7 @@
 [![Scheduled](https://github.com/bcgov/quickstart-openshift/actions/workflows/scheduled.yml/badge.svg)](https://github.com/bcgov/quickstart-openshift/actions/workflows/scheduled.yml)
 
 ##### Frontend (JavaScript/TypeScript)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_frontend&metric=bugs)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_frontend)
+<!-- [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_frontend&metric=bugs)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_frontend)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_frontend&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_frontend)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_frontend&metric=coverage)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_frontend)
 [![Duplicated Lines](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_frontend&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_frontend)
@@ -14,24 +14,18 @@
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_frontend&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_frontend)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_frontend&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_frontend)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_frontend&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_frontend)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_frontend&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_frontend)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_frontend&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_frontend) -->
 
-##### Backend (JavaScript/TypeScript)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_backend&metric=bugs)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_backend)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_backend&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_backend)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_backend&metric=coverage)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_backend)
-[![Duplicated Lines](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_backend&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_backend)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_backend&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_backend)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_backend&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_backend)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_backend&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_backend)
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_backend&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_backend)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_backend&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_backend)
 
-# QuickStart for OpenShift
+# Leaflet QuickStart for OpenShift
+
+This is repo / template is experimental at this stage.  The bulk of the content has shamelessly been stolen from the openshift [quickstart template repo](https://github.com/bcgov/quickstart-openshift)
 
 ## Pull Request-Based Workflows with Sample Stack
 
-The is a fully functional set of [GitHub Actions](https://github.com/bcgov/quickstart-openshift/actions) workflows and a starter application stack intended to help Agile teams hit the ground running.
+_the following statement is aspirational_
+
+The is a fully functional set of [GitHub Actions](https://github.com/bcgov/quickstart-openshift/actions) workflows and a starter application stack intended to help GIS Leaflet developers hit the ground running.
 
 Features:
 * Pull Request-based pipeline
@@ -50,10 +44,7 @@ Features:
 * Pod Disruption Budgets for High Availability
 * Self Healing through Health checks
 * Sample application stack:
-    * Database: Postgres, PostGIS, backups, Flyway
-    * Frontend: TypeScript, Caddy Server
-    * Backend: TypeScript, Nest.js
-    * Alternative backends for [Java/Quarkus, Go/Fiber and Python/FastAPI](https://github.com/bcgov/quickstart-openshift-backends)
+    * Frontend: TypeScript, Leaflet, Caddy Server
 
 # Table of Contents
 
@@ -95,7 +86,7 @@ The following are required:
 
 Create a new repository using this repository as a template.
 
-* Verify bcgov/quickstart-openshift is selected under Repository template
+* Verify bcgov/qsos-leaflet is selected under Repository template
 
 ![](./.github/graphics/template.png)
 
@@ -309,36 +300,6 @@ The starter stack includes a (React, MUI, Vite, Caddy) frontend, Pluggable backe
 
 Features:
 * [TypeScript](https://www.typescriptlang.org/) strong-typing for JavaScript
-* [NestJS](https://docs.nestjs.com) Nest/Node backend and frontend
-* [Flyway](https://flywaydb.org/) database migrations
-* [Postgres](https://www.postgresql.org/) or [PostGIS](https://postgis.net/) database
-* [backup-container](https://github.com/BCDevOps/backup-container) provided by BCDevOps
-
-Postgres is default.  Switch to PostGIS by copying the appropriate Dockerfile to `./database`:
-
-> cp ./database/postgis/Dockerfile ./database
-
-## Pluggable Backends
-
-This quickstart works with more than just JavaScript.  Please check out our pluggable [backends repository](https://github.com/bcgov/quickstart-openshift-backends).  Flyway-based database migrations for each are included.
-
-Supported languages:
-* [Go with Fiber](https://github.com/bcgov/quickstart-openshift-backends/tree/main/backend-go)
-* [Java with Quarkus, Cloud Native](https://github.com/bcgov/quickstart-openshift-backends/tree/main/backend-go)
-* [Python with FastAPI](https://github.com/bcgov/quickstart-openshift-backends/tree/main/backend-py)
-
-## SchemaSpy
-
-The database documentation is created and deployed to GitHub pages.  See [here](https://bcgov.github.io/quickstart-openshift/schemaspy/index.html).
-
-After a full workflow run and merge can been run, please do the following:
-
-1. Select Settings (gear, top right)  *> Pages (under `Code and automation`)
-2. Click `Branch` or `Add teams`
-3. Select `gh-pages`
-4. Click `Save`
-
-![img.png](.github/graphics/schemaspy.png)
 
 # Resources
 
