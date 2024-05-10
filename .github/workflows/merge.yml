@@ -53,11 +53,9 @@ jobs:
     with:
       environment: prod
       params:
-        --set backend.deploymentStrategy=RollingUpdate
         --set frontend.deploymentStrategy=RollingUpdate
         --set global.autoscaling=true
         --set frontend.pdb.enabled=true
-        --set backend.pdb.enabled=true
   promote:
     name: Promote Images
     needs: [deploy-prod, vars]
@@ -66,7 +64,7 @@ jobs:
       packages: write
     strategy:
       matrix:
-        package: [migrations, backend, frontend]
+        package: [frontend]
     timeout-minutes: 1
     steps:
       - uses: shrink/actions-docker-registry-tag@v4

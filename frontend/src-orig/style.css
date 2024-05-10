@@ -1,0 +1,30 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.leaflet-container {
+    height: 400px;
+    width: 600px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.container {
+    display: flex;
+    /* or inline-flex */
+    flex-direction: row;
+    align-items: center;
+}
+
+.map_align {
+    margin-top: 1px;
+}
+
+#map {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #323232;
+}
