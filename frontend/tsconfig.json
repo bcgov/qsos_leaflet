@@ -1,31 +1,23 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "strictNullChecks": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "types": ["vitest/globals","cypress", "node", "cypress-file-upload","@testing-library/cypress"],
-    "baseUrl": "./",
-    "paths": {
-      "@": ["src"],
-      "test": ["test"],
-      "test/*": ["test/*"],
-      "@/*": ["src/*"],
-      "~/*": ["node_modules/*"]
-    }
-  },
-  "include": ["src","src/**/*", "src/**/*.tsx"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+	"compilerOptions": {
+		"allowJs": false,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"module": "commonjs", // for typescript webpack files
+		"moduleResolution": "Node",
+		"noFallthroughCasesInSwitch": true,
+		"noEmit": false,
+		"resolveJsonModule": true,
+		"rootDir": ".",
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
+		"target": "ESNext",
+		"useDefineForClassFields": true,
+		"types": ["node", "webpack-env"]
+	},
+	"include": ["src/**/*", "webpack.common.ts", "webpack.dev.ts", "webpack.prod.ts"]
 }
