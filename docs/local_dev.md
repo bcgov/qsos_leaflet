@@ -23,6 +23,19 @@ cd frontend
 npm run dev
 ```
 
-Should set things up allowing for local development
+Should set things up allowing for local development.  The npm served version
+of the app can be viewed at [http://localhost:3000/index.html](http://localhost:3000/index.html)
 
+# Docker
 
+You can also serve the app up through the docker-compose file that exists in the 
+repository.
+
+`docker compose up frontend`
+
+The Docker compose version can be viewed at: 
+[http://localhost:3005/index.html](http://localhost:3005/index.html)
+
+# Deployments
+
+If you push your branch and trigger a 

@@ -1,11 +1,11 @@
 [![MIT License](https://img.shields.io/github/license/bcgov/quickstart-openshift.svg)](/LICENSE.md)
 [![Lifecycle](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 
-[![Merge](https://github.com/bcgov/quickstart-openshift/actions/workflows/merge.yml/badge.svg)](https://github.com/bcgov/quickstart-openshift/actions/workflows/merge.yml)
-[![Analysis](https://github.com/bcgov/quickstart-openshift/actions/workflows/analysis.yml/badge.svg)](https://github.com/bcgov/quickstart-openshift/actions/workflows/analysis.yml)
-[![Scheduled](https://github.com/bcgov/quickstart-openshift/actions/workflows/scheduled.yml/badge.svg)](https://github.com/bcgov/quickstart-openshift/actions/workflows/scheduled.yml)
+[![Merge](https://github.com/bcgov/qsos-leaflet/actions/workflows/merge.yml/badge.svg)](https://github.com/bcgov/qsos-leaflet/actions/workflows/merge.yml)
+[![Analysis](https://github.com/bcgov/qsos-leaflet/actions/workflows/analysis.yml/badge.svg)](https://github.com/bcgov/qsos-leaflet/actions/workflows/analysis.yml)
+[![Scheduled](https://github.com/bcgov/qsos-leaflet/actions/workflows/scheduled.yml/badge.svg)](https://github.com/bcgov/qsos-leaflet/actions/workflows/scheduled.yml)
 
-##### Frontend (JavaScript/TypeScript)
+##### Frontend - Leaflet (JavaScript/TypeScript)
 <!-- [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_frontend&metric=bugs)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_frontend)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_frontend&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_frontend)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_frontend&metric=coverage)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_frontend)
@@ -16,10 +16,16 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_frontend&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_frontend)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=quickstart-openshift_frontend&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=quickstart-openshift_frontend) -->
 
+<image src="https://lh3.googleusercontent.com/pw/AP1GczNhzPJlfI99flndihLVvYO654vUWnKATfp92GfrLn0bBSyxV57x38S3M91xKMfxm5W-VkKG9zSdfFz7wQgp5QIQCFnFu9lAdeIZiJma_BuOHdz6I3a0wC-qsggt5ghe9Vw-soMWksX7Th3DXsWO1msUAg=w1420-h800-s-no-gm?authuser=0" width="800px">
 
 # Leaflet QuickStart for OpenShift
 
 This is repo / template is experimental at this stage.  The bulk of the content has shamelessly been stolen from the openshift [quickstart template repo](https://github.com/bcgov/quickstart-openshift)
+
+# Local Development with Leaflet QuickStart for OpenShift
+
+[see docs here](./docs/local_dev.md)
+
 
 ## Pull Request-Based Workflows with Sample Stack
 
@@ -183,10 +189,6 @@ To opt-in:
 * Select "Submit new issue"
 * Wait for Renovate to start sending pull requests to your repository
 
-### Dependabot
-
-Dependabot is no longer recommended as an alternative to Renovate for generating security, vulnerability and dependency pull requests.  It can still be used to generate warnings under the GitHub Security tab, which is only viewable by repository administrators.
-
 ## Repository Configuration
 
 ### Pull Request Handling
@@ -209,7 +211,7 @@ Pull Requests:
 
 Packages are available from your repository (link on right).  All should have visibility set to public for the workflows to run successfully.
 
-E.g. https://github.com/bcgov/quickstart-openshift/packages
+E.g. https://github.com/bcgov/qsos-leaflet/packages
 
 ### Branch Protection
 
