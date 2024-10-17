@@ -16,7 +16,7 @@
 		"esri-leaflet-vector": "^4.2.5",
 		"leaflet": "^1.9.4",
 		"leaflet-easybutton": "^2.4.0",
-		"turf": "^3.0.14",
+		"@turf/turf": "^7.1.0",
     	        "underscore": "^1.13.7"
 	},
 	"devDependencies": {
