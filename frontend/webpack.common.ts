@@ -6,7 +6,8 @@ import type { Configuration } from 'webpack';
 
 const config: Configuration = {
 	context: path.resolve(__dirname, './src'),
-	entry: { app: './index.ts' },
+	entry: { app: './index.ts',
+		distance: '/distance.ts' },
 	module: {
 		rules: [
 			{
@@ -48,6 +49,12 @@ const config: Configuration = {
 			title: 'Leaflet Typescript',
 			filename: 'index.html',
 			chunks: ['vendors', 'app'],
+		}),
+		new HtmlWebpackPlugin({
+			template: path.join(__dirname, 'src', 'distance.html'),
+			title: 'Leaflet Typescript Distance',
+			filename: 'distance.html',
+			chunks: ['vendors', 'distance'],
 		}),
 		new MiniCssExtractPlugin({
 			filename: 'style.css',
